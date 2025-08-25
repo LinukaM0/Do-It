@@ -2,17 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/onboarding_1"
+    android:background="@drawable/bg1"
     android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/logo_image"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/profile_picture_description"
-        android:src="@drawable/logo" />
 
     <ImageView
         android:id="@+id/profile_image"
@@ -31,7 +24,7 @@
         android:layout_marginHorizontal="12dp"
         android:background="@drawable/login"
         android:backgroundTint="@color/main3"
-        android:hint="@string/username_hint"
+        android:hint="Kumarawansha"
         android:padding="12dp"
         android:textColorHint="@color/dark" />
 
@@ -43,7 +36,7 @@
         android:layout_marginHorizontal="12dp"
         android:background="@drawable/login"
         android:backgroundTint="@color/main3"
-        android:hint="@string/email_hint"
+        android:hint="kuma@gmail.com"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textColorHint="@color/dark" />

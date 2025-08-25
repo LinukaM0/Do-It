@@ -12,23 +12,23 @@ class OnboardingAdapter(activity: FragmentActivity) : FragmentStateAdapter(activ
         return when (position) {
             0 -> OnboardingFragment.newInstance(
                 title = "Organize Your Tasks",
-                description = "Create, manage, and organize all your daily tasks in one place. Stay focused and productive with our intuitive task management system.",
+                description = "Create, manage, and organize all your daily tasks in one place. Stay focused and achieve your goals with our intuitive task management system.",
                 imageRes = R.drawable.onboarding_1, // You'll need to add this image
-                backgroundColor = "#E3F2FD"
+                backgroundColor = "#BEEFF1" // Light indigo background
             )
             1 -> OnboardingFragment.newInstance(
-                title = "Manage Your Time",
-                description = "Schedule your tasks with specific time slots. Track your progress and make the most of your day with smart time allocation.",
+                title = "Track Your Progress",
+                description = "Monitor your productivity and see how much you've accomplished. Stay motivated with visual progress tracking and completion statistics.",
                 imageRes = R.drawable.onboarding_2, // You'll need to add this image
-                backgroundColor = "#F3E5F5"
+                backgroundColor = "#BEEFF1" // Light purple background
             )
             2 -> OnboardingFragment.newInstance(
                 title = "Boost Productivity",
-                description = "Achieve your goals faster with our productivity tools. Turn your plans into reality and celebrate your accomplishments.",
+                description = "Transform your daily routine with smart reminders and priority management. Turn your plans into achievements, one task at a time.",
                 imageRes = R.drawable.onboarding_3, // You'll need to add this image
-                backgroundColor = "#E8F5E8"
+                backgroundColor = "#BEEFF1" // Light green background
             )
-            else -> OnboardingFragment.newInstance("", "", 0, "#FFFFFF")
+            else -> OnboardingFragment.newInstance("", "", 0, "#F9FAFB")
         }
     }
 }

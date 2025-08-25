@@ -1,40 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rootView"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="32dp">
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never">
 
-    <ImageView
-        android:id="@+id/ivOnboarding"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:layout_marginBottom="48dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/home" />
-
-    <TextView
-        android:id="@+id/tvTitle"
+    <LinearLayout
+        android:id="@+id/rootView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Do-It"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="@color/main"
+        android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:paddingHorizontal="40dp"
+        android:paddingTop="60dp"
+        android:paddingBottom="40dp"
+        >
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Organize your tasks and boost your productivity with our intuitive to-do list app."
-        android:textSize="16sp"
-        android:textColor="@color/dark"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:alpha="0.8" />
+        <!-- Spacer for better vertical centering -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-</LinearLayout>
+        <!-- Image container with modern styling -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginBottom="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <ImageView
+                android:id="@+id/ivOnboarding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/home"
+                android:layout_gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title with modern typography -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Do-It"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.01"
+            android:lineSpacingMultiplier="1.1" />
+
+        <!-- Description with improved readability -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Organize your tasks and boost your productivity with our intuitive to-do list app."
+            android:textSize="18sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:lineSpacingMultiplier="1.4"
+            android:fontFamily="sans-serif"
+            android:layout_marginHorizontal="8dp"
+            android:maxLines="4"
+            android:ellipsize="end" />
+
+        <!-- Bottom spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+
+    </LinearLayout>
+
+</ScrollView>
