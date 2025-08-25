@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home"
+    android:background="@drawable/bg5">
+
+    <!-- ScrollView to make the content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Wrapping the existing content inside ScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:context=".TodoListActivity">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_title"
+                android:textColor="@color/main"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:id="@+id/tvHeader"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Input Field for New Task -->
+            <EditText
+                android:id="@+id/et_new_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHeader"
+                android:layout_margin="24dp"
+                android:background="@drawable/login"
+                android:backgroundTint="@color/main3"
+                android:hint="@string/hint_new_task"
+                android:padding="12dp"
+                android:textColor="@color/main" />
+
+            <!-- Add Task Button -->
+            <Button
+                android:id="@+id/btn_add_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/btn_add_task"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/et_new_task"
+                android:backgroundTint="@color/main"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Existing Task Inputs -->
+            <EditText
+                android:id="@+id/et_task1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_new_task"
+                android:layout_marginTop="175dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/login"
+                android:backgroundTint="@color/main3"
+                android:hint="@string/hint_task1"
+                android:padding="32dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_task2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_task1"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/login"
+                android:backgroundTint="@color/main3"
+                android:hint="@string/hint_task2"
+                android:padding="32dp" />
+
+            <EditText
+                android:id="@+id/et_task3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_task2"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/login"
+                android:backgroundTint="@color/main3"
+                android:hint="@string/hint_task3"
+                android:padding="32dp" />
+
+            <!-- Clear All Tasks Button -->
+            <Button
+                android:id="@+id/btn_clear_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_clear_all"
+                android:backgroundTint="@color/main"
+                android:textColor="#FFFFFF"
+                android:paddingVertical="18dp"
+                android:textSize="16sp"
+                android:layout_marginTop="550dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <!-- Fragment Container -->
+
+            <!-- Bottom Navigation Bar -->
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#06949B"
+                android:elevation="8dp"
+                app:menu="@menu/nav_menu" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

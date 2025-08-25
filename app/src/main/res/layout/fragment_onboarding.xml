@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/ivOnboarding"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="48dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/home" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Do-It"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/main"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Organize your tasks and boost your productivity with our intuitive to-do list app."
+        android:textSize="16sp"
+        android:textColor="@color/dark"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:alpha="0.8" />
+
+</LinearLayout>
